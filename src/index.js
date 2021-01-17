@@ -2,6 +2,7 @@ const path=require('path');
 const express=require('express');
 const requests=require('requests');
 const app=express();
+const port = process.env.port || 8080;
 
 const webpath=path.join(__dirname,'../public');
 
@@ -16,6 +17,6 @@ app.get('/temp',(req,res)=>{
     // );
 });
 
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log("Connected");
 });
